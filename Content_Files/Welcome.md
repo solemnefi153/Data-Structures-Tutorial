@@ -2,8 +2,8 @@
 
 Welcome to this Data Structures Tutorial. This course is intended to help python programmers understand the advantages, use, and performance of data structures. This course is divided into these main modules.  
 
-<!-- - [Fundamentals](1-Fundamentals/Introduction.md)
-- [Array Based Data Structures](2-Array_Based_Data_Structures/Introduction.md)
+- [Fundamentals](1-Fundamentals/1/Introduction.md)
+<!-- - [Array Based Data Structures](2-Array_Based_Data_Structures/Introduction.md)
 - [Node Based Data Structures](3-Node_Based_Data_Structures/Introduction.md) -->
 - [Data Sctuctures](./4-Data_Structures/4.1-Stack/4.1.1-Introduction.md)
 
