@@ -5,6 +5,7 @@ Welcome to this Data Structures Tutorial. This course is intended to help python
 - [Fundamentals](1-Fundamentals/Introduction.md)
 - [Array Based Data Structures](2-Array_Based_Data_Structures/Introduction.md)
 - [Node Based Data Structures](3-Node_Based_Data_Structures/Introduction.md)
+- [Data Sctuctures](4-Data_Structures/Introduction.md)
 
 
 The "Fundamentals" module, will walk you through the main topics that you need to know to better understand data structures. This information with help you  better decide which data structures to use in your own code. 
