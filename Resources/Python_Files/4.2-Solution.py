@@ -1,31 +1,83 @@
 import copy
 
+class Node():
+    def __init__(self, value=None):
+        self.value = value
+        self.parent = None
+        self.next = None
+
+class LinkedList():
+    def __init__(self):
+        self.numOfElements = 0
+        self.head = None
+        self.tail = None
+    
+    def empty(self):
+        return self.numOfElements == 0
+
+    def push_back(self, newValue):
+        newNode = Node(newValue)
+        if(self.head == None):
+            self.head = newNode
+            self.tail = newNode
+        else:
+            self.head.next = newNode
+            newNode.parent = self.head
+            self.head = newNode
+
+        self.numOfElements = self.numOfElements + 1
+
+    def pop_back(self):
+        if(self.head != None):
+            value = self.head.value
+            if(self.head.parent != None):
+                self.head.parent.next = None
+            self.head = self.head.parent
+            self.numOfElements = self.numOfElements - 1
+            if(self.numOfElements == 0):
+                self.tail = None
+            return value
+        else: 
+            return None
+
+    def size(self):
+        return self.numOfElements
+
+    def copy(self):
+        newLinkedList = LinkedList()
+        currentCopiedNode = self.tail
+        while currentCopiedNode != None:
+            newLinkedList.push_back(currentCopiedNode.value)
+            currentCopiedNode = currentCopiedNode.next
+        return newLinkedList
+        
+
 
 class Stack():
-    def __init__(self, data=[]):
+    def __init__(self , data = LinkedList()):
         self.data = data
 
     def empty(self):
-        return len(self.data) == 0
+        return self.data.empty()
     
     def size(self):
-        return len(self.data)
+        return self.data.size()
 
     def top(self):
-        return self.data[-1]
+        return self.data.head.value
 
     def push(self, newElement):
-        self.data.append(newElement)
+        self.data.push_back(newElement)
 
     def pop(self):
-        return self.data.pop()
-    
+        return self.data.pop_back()
+
     def copy(self):
         return  Stack(self.data.copy())
 
-
         
 
+    
 
 class StackOfActins:
     def __init__(self):

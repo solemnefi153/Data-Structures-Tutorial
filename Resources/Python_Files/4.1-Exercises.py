@@ -20,7 +20,12 @@ class Stack():
     def pop(self):
         return self.data.pop()
 
-        
+    def copy(self):
+        return  Stack(self.data.copy())
+
+
+
+      
 
 class StackOfActins:
     def __init__(self):

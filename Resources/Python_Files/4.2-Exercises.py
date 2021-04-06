@@ -1,31 +1,62 @@
-import copy
+class Node():
+    def __init__(self, value=None):
+        self.value = value
+        self.parent = None
+        self.next = None
+
+class LinkedList():
+    def __init__(self):
+        self.numOfElements = 0
+        self.head = None
+        self.tail = None
+    
+    def empty(self):
+        pass
+
+    def push_back(self, newValue):
+        pass
+
+    def pop_back(self):
+        pass
+
+    def size(self):
+        pass
+
+    def copy(self):
+        newLinkedList = LinkedList()
+        currentCopiedNode = self.tail
+        while currentCopiedNode != None:
+            newLinkedList.push_back(currentCopiedNode.value)
+            currentCopiedNode = currentCopiedNode.next
+        return newLinkedList
+        
 
 
 class Stack():
-    def __init__(self, data=[]):
+    def __init__(self , data = LinkedList()):
         self.data = data
 
     def empty(self):
-        return len(self.data) == 0
+        pass
     
     def size(self):
-        return len(self.data)
+        pass
 
     def top(self):
-        return self.data[-1]
+        pass
 
     def push(self, newElement):
-        self.data.append(newElement)
+        self.data.push_back(newElement)
 
     def pop(self):
-        return self.data.pop()
-    
+        return self.data.pop_back()
+
     def copy(self):
         return  Stack(self.data.copy())
 
-
         
 
+    
 
 class StackOfActins:
     def __init__(self):
